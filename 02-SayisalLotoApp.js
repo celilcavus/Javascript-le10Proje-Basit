@@ -1,14 +1,26 @@
-let myNumber = 000000;
-let gameNumber = 000000;
+let myNumber =  229329;
+let gameNumber = 999999;
+                
 
-
-var numbers = function createRandomNumber(){
-   return Math.floor(Math.random() * 999999);
+function createRandomNumber(){
+   var no =  Math.floor(Math.random() * gameNumber) + 1;
+   return no;
 }
 
-function NumberControl(youNumber){
-   let i = 0;
-   while (i>= 5) {
-      console.log(numbers);
+
+function NumberControl(number){
+   let i = 1;
+  
+   while (i <= 89) {
+      var value = createRandomNumber();
+      if (value == number)  {
+          console.log("Şanlsınız.. Büyük İkramiyeyi Kazandınız...");
+          break;
+      }
+      i++;
+      
+    console.log(i + ". Numara : ".concat(" ",value));
    }
 };
+
+console.log(NumberControl(myNumber));
